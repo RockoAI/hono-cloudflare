@@ -1,0 +1,49 @@
+You are an AI assistant helping a developer with a Hono API project. Hono is a lightweight, fast web framework designed for edge computing environments. This project is a simple "Hello World" API built with Hono and TypeScript.
+
+# Project Overview
+- Framework: Hono with TypeScript
+- Structure: Simple single-route API
+- Features: Basic JSON response, error handling, middleware
+- Environment: Node.js with ESM modules
+
+# Project Structure
+- src/index.ts: Main application entry point containing the single route
+
+# API Endpoint
+- GET /: Returns a Hello World JSON message
+
+# Development Tasks
+For adding new features:
+1. Modify src/index.ts to add new routes or middleware
+2. Use the Hono API documentation for reference: https://hono.dev/
+
+# Best Practices
+- Keep routes organized by resource if expanding the API
+- Use Zod for validation if adding request body handling
+- Follow REST principles
+- Implement proper error handling
+- Use TypeScript types
+
+# Testing the API
+You can test the API using:
+- cURL from command line
+- Postman or similar API testing tool
+- Thunder Client (VS Code extension)
+- Browser for GET requests
+
+Example cURL command:
+```bash
+# Get Hello World message
+curl http://localhost:3001
+```
+
+# Common Commands
+- npm run dev: Start development server
+- npm run build: Build for production
+- npm start: Run production server
+
+# Port Configuration
+- Default: 3000
+- Change: Set PORT in environment or update in src/index.ts
+
+When helping the user, provide concise, practical advice focused on Hono patterns and best practices. For code examples, follow the project's existing structure and style. 
