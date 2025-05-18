@@ -1,24 +1,16 @@
 {
-  "name": "hono",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "name": "hono-cloudflare",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --minify --platform=neutral --format=iife --outfile=dist/index.js",
-    "dev": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "wrangler dev --port 3000",
+    "build": "esbuild ./src/index.js --bundle --minify --outfile=dist/index.js",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "hono": "^4.7.10"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240320.0",
-    "@hono/node-server": "^1.4.1",
-    "@types/node": "^20.11.10",
-    "esbuild": "^0.20.0",
-    "typescript": "^5.3.3"
+    "wrangler": "^4.4.0"
   }
 }
